@@ -42,7 +42,7 @@ var scenes;
             this._a2Btn = new objects.Button("A2", config.Screen.WIDTH - this._a3Btn.getWidth() - 300, 560);
             this.addChild(this._a2Btn);
             // BACK Button event listener
-            this._a2Btn.on("click", this._a3ButtonClick, this);
+            this._a2Btn.on("click", this._a2ButtonClick, this);
             // add the decision button to the scene
             this._a1Btn = new objects.Button("A1", config.Screen.WIDTH - this._a3Btn.getWidth() - this._a2Btn.getWidth() - 380, 560);
             this.addChild(this._a1Btn);
@@ -63,12 +63,17 @@ var scenes;
         };
         decisionA.prototype._a3ButtonClick = function (event) {
             // Switch to the a  Scene
-            scene = config.Scene.gameScene1;
+            scene = config.Scene.outcomeA3;
             changeScene();
         };
         decisionA.prototype._a1ButtonClick = function (event) {
             // Switch to the a  Scene
             scene = config.Scene.outcomeA1;
+            changeScene();
+        };
+        decisionA.prototype._a2ButtonClick = function (event) {
+            // Switch to the a  Scene
+            scene = config.Scene.outcomeA2;
             changeScene();
         };
         return decisionA;

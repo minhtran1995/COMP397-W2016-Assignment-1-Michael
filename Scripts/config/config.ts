@@ -7,6 +7,9 @@
         public static gameScene1: number = 2;
         public static decisionA: number = 3;
         public static outcomeA1: number = 4;
+        public static outcomeA2: number = 5;
+        public static outcomeA3: number = 6;
+        public static decisionB: number = 7;
     }
     
     

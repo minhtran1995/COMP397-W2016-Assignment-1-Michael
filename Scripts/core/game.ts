@@ -14,6 +14,9 @@ var tut: scenes.TUTORIAL;
 var gameScene1: scenes.gameScene1;
 var decisionA: scenes.decisionA;
 var outcomeA1: scenes.outcomeA1;
+var outcomeA2: scenes.outcomeA2;
+var outcomeA3: scenes.outcomeA3;
+var decisionB: scenes.decisionB;
 
 function init(): void {
     // create a reference the HTML canvas Element
@@ -109,6 +112,26 @@ function changeScene(): void {
             currentScene = outcomeA1;
             var outcomeA1Sound = new Audio('../../Assets/Sound/A1Sound.mp3');
             outcomeA1Sound.play();
+            break;
+        case config.Scene.outcomeA2:
+            // show the game OVER scene
+            stage.removeAllChildren();
+            outcomeA2 = new scenes.outcomeA2();
+            currentScene = outcomeA2;
+            var outcomeA2Sound = new Audio('../../Assets/Sound/A2Sound.mp3');
+            outcomeA2Sound.play();
+            break;
+        case config.Scene.outcomeA3:
+            // show the game OVER scene
+            stage.removeAllChildren();
+            outcomeA3 = new scenes.outcomeA3();
+            currentScene = outcomeA3;
+            break;
+        case config.Scene.decisionB:
+            // show the game OVER scene
+            stage.removeAllChildren();
+            decisionB = new scenes.decisionB();
+            currentScene = decisionB;
             break;
     }
 

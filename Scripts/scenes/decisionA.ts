@@ -64,7 +64,7 @@ module scenes {
             this.addChild(this._a2Btn);
            
             // BACK Button event listener
-            this._a2Btn.on("click", this._a3ButtonClick, this);
+            this._a2Btn.on("click", this._a2ButtonClick, this);
             
               // add the decision button to the scene
             this._a1Btn = new objects.Button(
@@ -97,13 +97,19 @@ module scenes {
 
         private _a3ButtonClick(event: createjs.MouseEvent) {
             // Switch to the a  Scene
-            scene = config.Scene.gameScene1;
+            scene = config.Scene.outcomeA3;
             changeScene();
         }
         
         private _a1ButtonClick(event: createjs.MouseEvent) {
             // Switch to the a  Scene
             scene = config.Scene.outcomeA1;
+            changeScene();
+        }
+        
+        private _a2ButtonClick(event: createjs.MouseEvent) {
+            // Switch to the a  Scene
+            scene = config.Scene.outcomeA2;
             changeScene();
         }
     }

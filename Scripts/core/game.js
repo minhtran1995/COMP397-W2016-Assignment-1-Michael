@@ -11,6 +11,9 @@ var tut;
 var gameScene1;
 var decisionA;
 var outcomeA1;
+var outcomeA2;
+var outcomeA3;
+var decisionB;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -91,6 +94,26 @@ function changeScene() {
             currentScene = outcomeA1;
             var outcomeA1Sound = new Audio('../../Assets/Sound/A1Sound.mp3');
             outcomeA1Sound.play();
+            break;
+        case config.Scene.outcomeA2:
+            // show the game OVER scene
+            stage.removeAllChildren();
+            outcomeA2 = new scenes.outcomeA2();
+            currentScene = outcomeA2;
+            var outcomeA2Sound = new Audio('../../Assets/Sound/A2Sound.mp3');
+            outcomeA2Sound.play();
+            break;
+        case config.Scene.outcomeA3:
+            // show the game OVER scene
+            stage.removeAllChildren();
+            outcomeA3 = new scenes.outcomeA3();
+            currentScene = outcomeA3;
+            break;
+        case config.Scene.decisionB:
+            // show the game OVER scene
+            stage.removeAllChildren();
+            decisionB = new scenes.decisionB();
+            currentScene = decisionB;
             break;
     }
     console.log(currentScene.numChildren);
