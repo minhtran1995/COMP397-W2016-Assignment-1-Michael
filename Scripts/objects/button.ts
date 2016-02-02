@@ -4,10 +4,10 @@
         width: number;
         height: number;
         //CONSTRUCTOR
-        constructor(pathString:string, x:number, y: number) {
+        constructor(pathString: string, x: number, y: number) {
             super("../../Assets/images/" + pathString + ".png");
             this.x = x;
-            this.y = y; 
+            this.y = y;
 
             this.width = 150;
             this.height = 50;
@@ -19,6 +19,11 @@
             this.on("mouseout", this.outButton, this);
         }
 
+        public getWidth(): number {
+            return this.width;
+        }
+
+        
         // PRIVATE METHODS
         // Event Handler for mouse over
         overButton(event: createjs.MouseEvent): void {
@@ -29,6 +34,9 @@
         outButton(event: createjs.MouseEvent): void {
             event.currentTarget.alpha = 1.0;
         }
+
+
+
 
 
     }

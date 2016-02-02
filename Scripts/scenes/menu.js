@@ -40,7 +40,7 @@ var scenes;
         // START Button click event handler
         Menu.prototype._startButtonClick = function (event) {
             // Switch to the PLAY Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.TUTORIAL;
             changeScene();
         };
         return Menu;

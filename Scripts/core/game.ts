@@ -10,8 +10,10 @@ var scene: number;
 
 // Game Scenes
 var menu: scenes.Menu;
-var play: scenes.Play;
-var over: scenes.Over;
+var tut: scenes.TUTORIAL;
+var gameScene1: scenes.gameScene1;
+var decisionA: scenes.decisionA;
+var outcomeA1: scenes.outcomeA1;
 
 function init(): void {
     // create a reference the HTML canvas Element
@@ -79,19 +81,34 @@ function changeScene(): void {
             currentScene = menu;
             console.log("Starting MENU Scene");
             break;
-        case config.Scene.PLAY:
+        case config.Scene.TUTORIAL:
             // show the PLAY scene
             stage.removeAllChildren();
-            play = new scenes.Play();
-            currentScene = play;
+            tut = new scenes.TUTORIAL();
+            currentScene = tut;
             console.log("Starting PLAY Scene");
             break;
-        case config.Scene.OVER:
+        case config.Scene.gameScene1:
             // show the game OVER scene
             stage.removeAllChildren();
-            over = new scenes.Over();
-            currentScene = over;
-            console.log("Starting OVER Scene");
+            gameScene1 = new scenes.gameScene1();
+            currentScene = gameScene1;
+            //console.log("Starting OVER Scene");
+            break;
+        case config.Scene.decisionA:
+            // show the game OVER scene
+            stage.removeAllChildren();
+            decisionA = new scenes.decisionA();
+            currentScene = decisionA;
+            //console.log("Starting OVER Scene");
+            break;
+        case config.Scene.outcomeA1:
+            // show the game OVER scene
+            stage.removeAllChildren();
+            outcomeA1 = new scenes.outcomeA1();
+            currentScene = outcomeA1;
+            var outcomeA1Sound = new Audio('../../Assets/Sound/A1Sound.mp3');
+            outcomeA1Sound.play();
             break;
     }
 

@@ -19,6 +19,9 @@ var objects;
             this.on("mouseover", this.overButton, this);
             this.on("mouseout", this.outButton, this);
         }
+        Button.prototype.getWidth = function () {
+            return this.width;
+        };
         // PRIVATE METHODS
         // Event Handler for mouse over
         Button.prototype.overButton = function (event) {

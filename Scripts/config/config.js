@@ -5,8 +5,10 @@ var config;
         function Scene() {
         }
         Scene.MENU = 0;
-        Scene.PLAY = 1;
-        Scene.OVER = 2;
+        Scene.TUTORIAL = 1;
+        Scene.gameScene1 = 2;
+        Scene.decisionA = 3;
+        Scene.outcomeA1 = 4;
         return Scene;
     })();
     config.Scene = Scene;

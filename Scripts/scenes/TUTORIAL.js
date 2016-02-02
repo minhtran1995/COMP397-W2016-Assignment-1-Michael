@@ -3,27 +3,32 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// PLAY SCENE
+// TUTORIAL SCENE
 var scenes;
 (function (scenes) {
-    var Play = (function (_super) {
-        __extends(Play, _super);
+    var TUTORIAL = (function (_super) {
+        __extends(TUTORIAL, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function Play() {
+        function TUTORIAL() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        Play.prototype.start = function () {
+        TUTORIAL.prototype.start = function () {
+            //Add  picture
+            this._mainBG = new createjs.Bitmap("../../Assets/images/TutBG.jpg");
+            this.addChild(this._mainBG);
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("Game Scene", "60px Consolas", "#000000");
-            this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
-            this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
-            this._playLabel.x = config.Screen.CENTER_X;
-            this._playLabel.y = config.Screen.CENTER_Y;
+            this._playLabel = new createjs.Text("This is a simulated game based on the movie The Midnight Meat Train - By Ryûhei Kitamura."
+                + "\nYou are responsible for every single move in this game, as it will lead you to different outcomes."
+                + "\n\n\nWARNING: Player discretion advised", "20px Arial", "#e6e6e6");
+            //this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
+            //this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
+            this._playLabel.x = 100;
+            this._playLabel.y = 100;
             this.addChild(this._playLabel);
             // add the NEXT button to the PLAY scene
-            this._nextButton = new objects.Button("NextButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);
+            this._nextButton = new objects.Button("PlayButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);
             this.addChild(this._nextButton);
             // NEXT Button event listener
             this._nextButton.on("click", this._nextButtonClick, this);
@@ -36,23 +41,23 @@ var scenes;
             stage.addChild(this);
         };
         // PLAY Scene updates here
-        Play.prototype.update = function () {
+        TUTORIAL.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // NEXT Button click event handler
-        Play.prototype._nextButtonClick = function (event) {
+        TUTORIAL.prototype._nextButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.OVER;
+            scene = config.Scene.gameScene1;
             changeScene();
         };
         // BACK Button click event handler
-        Play.prototype._backButtonClick = function (event) {
+        TUTORIAL.prototype._backButtonClick = function (event) {
             // Switch to the OVER Scene
             scene = config.Scene.MENU;
             changeScene();
         };
-        return Play;
+        return TUTORIAL;
     })(objects.Scene);
-    scenes.Play = Play;
+    scenes.TUTORIAL = TUTORIAL;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=play.js.map
+//# sourceMappingURL=tutorial.js.map

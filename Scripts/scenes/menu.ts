@@ -53,7 +53,7 @@ module scenes {
         // START Button click event handler
         private _startButtonClick(event: createjs.MouseEvent) {
             // Switch to the PLAY Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.TUTORIAL;
             changeScene();
         }
     }
