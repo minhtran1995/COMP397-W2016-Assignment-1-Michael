@@ -1,10 +1,11 @@
 module scenes {
-    export class outcomeA3 extends objects.Scene {
+    export class outcomeB4 extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _GameLabel: createjs.Text;
         private _backButton: objects.Button;
-        private _nextButton: objects.Button;
+       
         private _mainBG: createjs.Bitmap;
+        private _outcomeB4Sound: HTMLAudioElement;
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
@@ -16,46 +17,39 @@ module scenes {
         public start(): void {
 
             //Add background picture
-            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeA3.png");
+            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeB4.jpg");
             this._mainBG.x = 0;
             this._mainBG.y = 100;
 
             this.addChild(this._mainBG);
 
             // add the PLAY label to the scene
-            this._GameLabel = new createjs.Text("Leon points at the security camera and warns the men"
-                + "\nAll their acts are being recored. The camera footages will be the evidence."
-                + "\nThey get pissed off and walk away."
-                + "\nThe girl and you are safe now...", "20px Arial", "#e6e6e6");
-            //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
-            //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
+            this._GameLabel = new createjs.Text("Leon convinces the girl to take the cab with him...."
+                + "\n...He doesn't feel safe when let the girl be alone on the way home"                
+                + "\nHe calls the cab..."
+                + "\nBoth of Them are alive - Good Ending ~~~", "20px Arial", "#e6e6e6");
+            
             this._GameLabel.x = 100;
             this._GameLabel.y = 0;
             this.addChild(this._GameLabel);
 
             // add the BACK button to the  scene
             this._backButton = new objects.Button(
-                "BackButton",
+                "playAgain",
                 97,
                 560);
             this.addChild(this._backButton);
            
             // BACK Button event listener
-            this._backButton.on("click", this._backButtonClick, this);
-            
-            // add the NEXT button to the  scene
-            this._nextButton = new objects.Button(
-                "NextButton",
-                950,
-                560);
-            this.addChild(this._nextButton);
+            this._backButton.on("click", this._backButtonClick, this);           
            
-            // Next Button event listener
-            this._nextButton.on("click", this._nextButtonClick, this);
 
             // add this scene to the global stage container
             stage.addChild(this);
-
+            this._outcomeB4Sound = new Audio('../../Assets/Sound/B4Sound.mp3');
+            this._outcomeB4Sound.loop = true;
+            this._outcomeB4Sound.volume= 0.7;
+            this._outcomeB4Sound.play();
 
         }
 
@@ -69,12 +63,9 @@ module scenes {
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
-            scene = config.Scene.decisionA;
-            changeScene();
-        }
-
-        private _nextButtonClick(event: createjs.MouseEvent) {
-            scene = config.Scene.decisionB;
+            this._outcomeB4Sound.pause();
+            this._outcomeB4Sound.currentTime = 0;;
+            scene = config.Scene.MENU;
             changeScene();
         }
     }

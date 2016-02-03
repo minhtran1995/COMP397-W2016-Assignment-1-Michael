@@ -10,6 +10,10 @@
         public static outcomeA2: number = 5;
         public static outcomeA3: number = 6;
         public static decisionB: number = 7;
+        public static outcomeB1: number = 8;
+        public static outcomeB2: number = 9;
+        public static outcomeB3: number = 10;
+        public static outcomeB4: number = 11;
     }
     
     

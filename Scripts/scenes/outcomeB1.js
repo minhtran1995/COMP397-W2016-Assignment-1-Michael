@@ -5,25 +5,24 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var scenes;
 (function (scenes) {
-    var outcomeA3 = (function (_super) {
-        __extends(outcomeA3, _super);
+    var outcomeB1 = (function (_super) {
+        __extends(outcomeB1, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function outcomeA3() {
+        function outcomeB1() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        outcomeA3.prototype.start = function () {
+        outcomeB1.prototype.start = function () {
             //Add background picture
-            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeA3.png");
+            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeB1.jpg");
             this._mainBG.x = 0;
             this._mainBG.y = 100;
             this.addChild(this._mainBG);
             // add the PLAY label to the scene
-            this._GameLabel = new createjs.Text("Leon points at the security camera and warns the men"
-                + "\nAll their acts are being recored. The camera footages will be the evidence."
-                + "\nThey get pissed off and walk away."
-                + "\nThe girl and you are safe now...", "20px Arial", "#e6e6e6");
+            this._GameLabel = new createjs.Text("The unknown man slowly pull out his bloody hammer...."
+                + "\n...He walks toward both of you..."
+                + "\nThe girl starts screaming...", "20px Arial", "#e6e6e6");
             //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
             //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
             this._GameLabel.x = 100;
@@ -43,20 +42,20 @@ var scenes;
             stage.addChild(this);
         };
         // Scene updates here
-        outcomeA3.prototype.update = function () {
+        outcomeB1.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // BACK Button click event handler
-        outcomeA3.prototype._backButtonClick = function (event) {
-            scene = config.Scene.decisionA;
-            changeScene();
-        };
-        outcomeA3.prototype._nextButtonClick = function (event) {
+        outcomeB1.prototype._backButtonClick = function (event) {
             scene = config.Scene.decisionB;
             changeScene();
         };
-        return outcomeA3;
+        outcomeB1.prototype._nextButtonClick = function (event) {
+            scene = config.Scene.decisionB;
+            changeScene();
+        };
+        return outcomeB1;
     })(objects.Scene);
-    scenes.outcomeA3 = outcomeA3;
+    scenes.outcomeB1 = outcomeB1;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=outcomeA3.js.map
+//# sourceMappingURL=outcomeB1.js.map

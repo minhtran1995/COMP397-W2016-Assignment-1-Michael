@@ -1,5 +1,5 @@
 module scenes {
-    export class outcomeA3 extends objects.Scene {
+    export class outcomeB1 extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _GameLabel: createjs.Text;
         private _backButton: objects.Button;
@@ -16,17 +16,16 @@ module scenes {
         public start(): void {
 
             //Add background picture
-            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeA3.png");
+            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeB1.jpg");
             this._mainBG.x = 0;
             this._mainBG.y = 100;
 
             this.addChild(this._mainBG);
 
             // add the PLAY label to the scene
-            this._GameLabel = new createjs.Text("Leon points at the security camera and warns the men"
-                + "\nAll their acts are being recored. The camera footages will be the evidence."
-                + "\nThey get pissed off and walk away."
-                + "\nThe girl and you are safe now...", "20px Arial", "#e6e6e6");
+            this._GameLabel = new createjs.Text("The unknown man slowly pull out his bloody hammer...."
+                + "\n...He walks toward both of you..."
+                + "\nThe girl starts screaming...", "20px Arial", "#e6e6e6");
             //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
             //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
             this._GameLabel.x = 100;
@@ -69,7 +68,7 @@ module scenes {
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
-            scene = config.Scene.decisionA;
+            scene = config.Scene.decisionB;
             changeScene();
         }
 

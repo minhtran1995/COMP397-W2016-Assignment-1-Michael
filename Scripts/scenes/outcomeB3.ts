@@ -1,10 +1,11 @@
 module scenes {
-    export class outcomeA3 extends objects.Scene {
+    export class outcomeB3 extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _GameLabel: createjs.Text;
         private _backButton: objects.Button;
-        private _nextButton: objects.Button;
+       
         private _mainBG: createjs.Bitmap;
+        private _outcomeB3Sound: HTMLAudioElement;
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
@@ -16,46 +17,39 @@ module scenes {
         public start(): void {
 
             //Add background picture
-            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeA3.png");
+            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeB3.png");
             this._mainBG.x = 0;
             this._mainBG.y = 100;
 
             this.addChild(this._mainBG);
 
             // add the PLAY label to the scene
-            this._GameLabel = new createjs.Text("Leon points at the security camera and warns the men"
-                + "\nAll their acts are being recored. The camera footages will be the evidence."
-                + "\nThey get pissed off and walk away."
-                + "\nThe girl and you are safe now...", "20px Arial", "#e6e6e6");
-            //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
-            //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
+            this._GameLabel = new createjs.Text("...Leon decides to call the cab, without realizing the girl got onbroad "
+                + "\n...Tomorrow morning, her body is found near the subway track"                
+                + "\nIt seems like he is the last person who saw her alive..."
+                + "\nSuddently, Leon get a phone call from an The Police...Seem like He got in trouble", "20px Arial", "#e6e6e6");
+            
             this._GameLabel.x = 100;
             this._GameLabel.y = 0;
             this.addChild(this._GameLabel);
 
             // add the BACK button to the  scene
             this._backButton = new objects.Button(
-                "BackButton",
+                "playAgain",
                 97,
                 560);
             this.addChild(this._backButton);
            
             // BACK Button event listener
-            this._backButton.on("click", this._backButtonClick, this);
-            
-            // add the NEXT button to the  scene
-            this._nextButton = new objects.Button(
-                "NextButton",
-                950,
-                560);
-            this.addChild(this._nextButton);
+            this._backButton.on("click", this._backButtonClick, this);           
            
-            // Next Button event listener
-            this._nextButton.on("click", this._nextButtonClick, this);
 
             // add this scene to the global stage container
             stage.addChild(this);
-
+            this._outcomeB3Sound = new Audio('../../Assets/Sound/B3Sound.mp3');
+            this._outcomeB3Sound.loop = true;
+            this._outcomeB3Sound.volume= 0.7;
+            this._outcomeB3Sound.play();
 
         }
 
@@ -69,12 +63,9 @@ module scenes {
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
-            scene = config.Scene.decisionA;
-            changeScene();
-        }
-
-        private _nextButtonClick(event: createjs.MouseEvent) {
-            scene = config.Scene.decisionB;
+            this._outcomeB3Sound.pause();
+            this._outcomeB3Sound.currentTime = 0;;
+            scene = config.Scene.MENU;
             changeScene();
         }
     }

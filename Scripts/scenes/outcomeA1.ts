@@ -4,6 +4,7 @@ module scenes {
         private _GameLabel: createjs.Text;
         private _backButton: objects.Button;
         private _mainBG: createjs.Bitmap;
+        private _outcomeA1Sound:HTMLAudioElement;
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
@@ -41,6 +42,10 @@ module scenes {
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
 
+
+this._outcomeA1Sound = new Audio('../../Assets/Sound/A1Sound.mp3');
+            this._outcomeA1Sound.loop = true;
+            this._outcomeA1Sound.play();
             // add this scene to the global stage container
             stage.addChild(this);
             
@@ -57,7 +62,8 @@ module scenes {
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
-            // Switch to the OVER Scene
+            
+            this._outcomeA1Sound.pause();
             scene = config.Scene.MENU;
             changeScene();
         }

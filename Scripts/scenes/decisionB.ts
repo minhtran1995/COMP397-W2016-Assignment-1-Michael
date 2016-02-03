@@ -66,7 +66,7 @@ module scenes {
             this.addChild(this._b2Btn);
            
             // decision Button event listener
-            this._b2Btn.on("click", this._b1BtnClick, this);
+            this._b2Btn.on("click", this._b2BtnClick, this);
             
             // add the decision button to the  scene
             this._b3Btn = new objects.Button(
@@ -76,7 +76,7 @@ module scenes {
             this.addChild(this._b3Btn);
            
             // decision Button event listener
-            this._b3Btn.on("click", this._b1BtnClick, this);
+            this._b3Btn.on("click", this._b3BtnClick, this);
             
             // add the decision button to the  scene
             this._b4Btn = new objects.Button(
@@ -86,7 +86,7 @@ module scenes {
             this.addChild(this._b4Btn);
            
             // decision Button event listener
-            this._b4Btn.on("click", this._b1BtnClick, this);
+            this._b4Btn.on("click", this._b4BtnClick, this);
 
 
 
@@ -114,10 +114,27 @@ module scenes {
 
         private _b1BtnClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.outcomeA3;
+            scene = config.Scene.outcomeB1;
             changeScene();
         }
 
+        private _b2BtnClick(event: createjs.MouseEvent) {
+            // Switch to the OVER Scene
+            scene = config.Scene.outcomeB2;
+            changeScene();
+        }
+        
+        private _b3BtnClick(event: createjs.MouseEvent) {
+            // Switch to the OVER Scene
+            scene = config.Scene.outcomeB3;
+            changeScene();
+        }
+        
+        private _b4BtnClick(event: createjs.MouseEvent) {
+            // Switch to the OVER Scene
+            scene = config.Scene.outcomeB4;
+            changeScene();
+        }
 
     }
 }

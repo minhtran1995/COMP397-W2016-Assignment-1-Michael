@@ -5,26 +5,25 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var scenes;
 (function (scenes) {
-    var outcomeA1 = (function (_super) {
-        __extends(outcomeA1, _super);
+    var outcomeB4 = (function (_super) {
+        __extends(outcomeB4, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function outcomeA1() {
+        function outcomeB4() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        outcomeA1.prototype.start = function () {
+        outcomeB4.prototype.start = function () {
             //Add background picture
-            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeA1.jpg");
-            this._mainBG.x = 300;
+            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeB4.jpg");
+            this._mainBG.x = 0;
             this._mainBG.y = 100;
             this.addChild(this._mainBG);
             // add the PLAY label to the scene
-            this._GameLabel = new createjs.Text("Leon Got Stabbed to dead..."
-                + "\nThe woman end up getting raped and killed the evil men"
-                + "\nTragedy...", "20px Arial", "#e6e6e6");
-            //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
-            //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
+            this._GameLabel = new createjs.Text("Leon convinces the girl to take the cab with him...."
+                + "\n...He doesn't feel safe when let the girl be alone on the way home"
+                + "\nHe calls the cab..."
+                + "\nBoth of Them are alive - Good Ending ~~~", "20px Arial", "#e6e6e6");
             this._GameLabel.x = 100;
             this._GameLabel.y = 0;
             this.addChild(this._GameLabel);
@@ -33,24 +32,27 @@ var scenes;
             this.addChild(this._backButton);
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
-            this._outcomeA1Sound = new Audio('../../Assets/Sound/A1Sound.mp3');
-            this._outcomeA1Sound.loop = true;
-            this._outcomeA1Sound.play();
             // add this scene to the global stage container
             stage.addChild(this);
+            this._outcomeB4Sound = new Audio('../../Assets/Sound/B4Sound.mp3');
+            this._outcomeB4Sound.loop = true;
+            this._outcomeB4Sound.volume = 0.7;
+            this._outcomeB4Sound.play();
         };
         // Scene updates here
-        outcomeA1.prototype.update = function () {
+        outcomeB4.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // BACK Button click event handler
-        outcomeA1.prototype._backButtonClick = function (event) {
-            this._outcomeA1Sound.pause();
+        outcomeB4.prototype._backButtonClick = function (event) {
+            this._outcomeB4Sound.pause();
+            this._outcomeB4Sound.currentTime = 0;
+            ;
             scene = config.Scene.MENU;
             changeScene();
         };
-        return outcomeA1;
+        return outcomeB4;
     })(objects.Scene);
-    scenes.outcomeA1 = outcomeA1;
+    scenes.outcomeB4 = outcomeB4;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=outcomeA1.js.map
+//# sourceMappingURL=outcomeB4.js.map

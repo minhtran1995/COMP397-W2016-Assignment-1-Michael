@@ -41,17 +41,17 @@ var scenes;
             this._b2Btn = new objects.Button("B2", 710, 250 + 41 + 30);
             this.addChild(this._b2Btn);
             // decision Button event listener
-            this._b2Btn.on("click", this._b1BtnClick, this);
+            this._b2Btn.on("click", this._b2BtnClick, this);
             // add the decision button to the  scene
             this._b3Btn = new objects.Button("B3", 710, 250 + 41 * 2 + 30);
             this.addChild(this._b3Btn);
             // decision Button event listener
-            this._b3Btn.on("click", this._b1BtnClick, this);
+            this._b3Btn.on("click", this._b3BtnClick, this);
             // add the decision button to the  scene
             this._b4Btn = new objects.Button("B4", 710, 250 + 41 * 3 + 30);
             this.addChild(this._b4Btn);
             // decision Button event listener
-            this._b4Btn.on("click", this._b1BtnClick, this);
+            this._b4Btn.on("click", this._b4BtnClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -67,7 +67,22 @@ var scenes;
         };
         decisionB.prototype._b1BtnClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.outcomeA3;
+            scene = config.Scene.outcomeB1;
+            changeScene();
+        };
+        decisionB.prototype._b2BtnClick = function (event) {
+            // Switch to the OVER Scene
+            scene = config.Scene.outcomeB2;
+            changeScene();
+        };
+        decisionB.prototype._b3BtnClick = function (event) {
+            // Switch to the OVER Scene
+            scene = config.Scene.outcomeB3;
+            changeScene();
+        };
+        decisionB.prototype._b4BtnClick = function (event) {
+            // Switch to the OVER Scene
+            scene = config.Scene.outcomeB4;
             changeScene();
         };
         return decisionB;
