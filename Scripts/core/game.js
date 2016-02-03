@@ -24,6 +24,7 @@ function init() {
     bmg = new Audio('../../Assets/Sound/bmg.mp3');
     bmg.loop = true;
     bmg.volume = 0.7;
+    bmg.play();
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
     // create our main display list container
