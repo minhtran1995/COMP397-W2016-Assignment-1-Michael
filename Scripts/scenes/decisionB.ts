@@ -50,7 +50,7 @@ module scenes {
             this._b1Btn = new objects.Button(
                 "B1",
                 710,
-                250);
+                250 + 30);
             this.addChild(this._b1Btn);
            
             // decision Button event listener
@@ -62,7 +62,7 @@ module scenes {
             this._b2Btn = new objects.Button(
                 "B2",
                 710,
-                200 + 41 * 2 + 30);
+                250 + 41 + 30);
             this.addChild(this._b2Btn);
            
             // decision Button event listener
@@ -72,7 +72,7 @@ module scenes {
             this._b3Btn = new objects.Button(
                 "B3",
                 710,
-                200 + 41 * 3 + 30);
+                250 + 41 * 2 + 30);
             this.addChild(this._b3Btn);
            
             // decision Button event listener
@@ -82,7 +82,7 @@ module scenes {
             this._b4Btn = new objects.Button(
                 "B4",
                 710,
-                200 + 41 * 4 + 30);
+                250 + 41 * 3 + 30);
             this.addChild(this._b4Btn);
            
             // decision Button event listener

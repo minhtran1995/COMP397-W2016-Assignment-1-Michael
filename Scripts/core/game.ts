@@ -43,7 +43,7 @@ function init(): void {
 
     var bmg = new Audio('../../Assets/Sound/bmg.mp3');
     bmg.loop = true;
-    bmg.volume = 0.4;
+    bmg.volume = 0.7;
     bmg.play();
 }
 

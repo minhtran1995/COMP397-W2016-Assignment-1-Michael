@@ -33,22 +33,22 @@ var scenes;
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
             // add the decision button to the  scene
-            this._b1Btn = new objects.Button("B1", 710, 250);
+            this._b1Btn = new objects.Button("B1", 710, 250 + 30);
             this.addChild(this._b1Btn);
             // decision Button event listener
             this._b1Btn.on("click", this._b1BtnClick, this);
             // add the decision button to the  scene
-            this._b2Btn = new objects.Button("B2", 710, 200 + 41 * 2 + 30);
+            this._b2Btn = new objects.Button("B2", 710, 250 + 41 + 30);
             this.addChild(this._b2Btn);
             // decision Button event listener
             this._b2Btn.on("click", this._b1BtnClick, this);
             // add the decision button to the  scene
-            this._b3Btn = new objects.Button("B3", 710, 200 + 41 * 3 + 30);
+            this._b3Btn = new objects.Button("B3", 710, 250 + 41 * 2 + 30);
             this.addChild(this._b3Btn);
             // decision Button event listener
             this._b3Btn.on("click", this._b1BtnClick, this);
             // add the decision button to the  scene
-            this._b4Btn = new objects.Button("B4", 710, 200 + 41 * 4 + 30);
+            this._b4Btn = new objects.Button("B4", 710, 250 + 41 * 3 + 30);
             this.addChild(this._b4Btn);
             // decision Button event listener
             this._b4Btn.on("click", this._b1BtnClick, this);
