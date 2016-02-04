@@ -21,6 +21,11 @@ var outcomeB1: scenes.outcomeB1;
 var outcomeB2: scenes.outcomeB2;
 var outcomeB3: scenes.outcomeB3;
 var outcomeB4: scenes.outcomeB4;
+var decisionC: scenes.decisionC;
+var outcomeC1: scenes.outcomeC1;
+var outcomeC2: scenes.outcomeC2;
+var outcomeC1Ending: scenes.outcomeC1Ending;
+var outcomeC2Ending: scenes.outcomeC2Ending;
 var bmg: HTMLAudioElement;
 function init(): void {
     //Set up BMG
@@ -150,13 +155,38 @@ function changeScene(): void {
             outcomeB3 = new scenes.outcomeB3();
             currentScene = outcomeB3;
             break;
-        case config.Scene.outcomeB4:                      
+        case config.Scene.outcomeB4:
             outcomeB4 = new scenes.outcomeB4();
             currentScene = outcomeB4;            
             //This is happy ending scene
             //There is no Horror anymore
             bmg.pause();
             bmg.currentTime = 0;
+            break;
+        case config.Scene.decisionC:
+            // show the game OVER scene            
+            decisionC = new scenes.decisionC();
+            currentScene = decisionC;
+            break;
+        case config.Scene.outcomeC1:
+            // show the game OVER scene            
+            outcomeC1 = new scenes.outcomeC1();
+            currentScene = outcomeC1;
+            break;
+        case config.Scene.outcomeC2:
+            // show the game OVER scene            
+            outcomeC2 = new scenes.outcomeC2();
+            currentScene = outcomeC2;
+            break;
+        case config.Scene.outcomeC1Ending:
+            // show the game OVER scene            
+            outcomeC1Ending = new scenes.outcomeC1Ending();
+            currentScene = outcomeC1Ending;
+            break;
+        case config.Scene.outcomeC2Ending:
+            // show the game OVER scene            
+            outcomeC2Ending = new scenes.outcomeC2Ending();
+            currentScene = outcomeC2Ending;
             break;
     }
 

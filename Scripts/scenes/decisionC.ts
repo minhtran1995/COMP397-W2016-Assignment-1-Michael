@@ -1,9 +1,12 @@
 module scenes {
-    export class outcomeB1 extends objects.Scene {
+    export class decisionC extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _GameLabel: createjs.Text;
         private _backButton: objects.Button;
         private _nextButton: objects.Button;
+
+        private _b2Btn: objects.Button;
+        private _b1Btn: objects.Button;
         private _mainBG: createjs.Bitmap;
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -16,19 +19,17 @@ module scenes {
         public start(): void {
 
             //Add background picture
-            this._mainBG = new createjs.Bitmap("../../Assets/images/outcomeB1.jpg");
+            this._mainBG = new createjs.Bitmap("../../Assets/images/decisionC.jpg");
             this._mainBG.x = 0;
             this._mainBG.y = 100;
 
             this.addChild(this._mainBG);
 
             // add the PLAY label to the scene
-            this._GameLabel = new createjs.Text("The unknown man slowly pull out his bloody hammer...."
-                + "\n...He walks toward both of you..."
-                + "\nThe girl starts screaming...", "20px Arial", "#e6e6e6");
-            //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
-            //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
-            this._GameLabel.x = 100;
+            this._GameLabel = new createjs.Text("Leon stands still..., he couldn't believe in his eyes"
+                + "\nA quick thought comes to his mind...", "20px Arial", "#e6e6e6");
+
+            this._GameLabel.x = 500;
             this._GameLabel.y = 0;
             this.addChild(this._GameLabel);
 
@@ -41,16 +42,33 @@ module scenes {
            
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);
-            
-            // add the NEXT button to the  scene
-            this._nextButton = new objects.Button(
-                "NextButton",
-                950,
+
+            // add the decision button to the  scene
+            this._b1Btn = new objects.Button(
+                "C1",
+                710,
                 560);
-            this.addChild(this._nextButton);
+            this.addChild(this._b1Btn);
            
-            // Next Button event listener
-            this._nextButton.on("click", this._nextButtonClick, this);
+            // decision Button event listener
+            this._b1Btn.on("click", this._b1BtnClick, this);
+
+
+
+            // add the decision button to the  scene
+            this._b2Btn = new objects.Button(
+                "C2",
+                710+162+20,
+                560);
+            this.addChild(this._b2Btn);
+           
+            // decision Button event listener
+            this._b2Btn.on("click", this._b2BtnClick, this);
+            
+           
+
+
+
 
             // add this scene to the global stage container
             stage.addChild(this);
@@ -68,13 +86,24 @@ module scenes {
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
-            scene = config.Scene.decisionB;
+            // Switch to the OVER Scene
+            scene = config.Scene.outcomeB1;
             changeScene();
         }
 
-        private _nextButtonClick(event: createjs.MouseEvent) {
-            scene = config.Scene.decisionC;
+        private _b1BtnClick(event: createjs.MouseEvent) {
+            // Switch to the OVER Scene
+            scene = config.Scene.outcomeC1;
             changeScene();
         }
+
+        private _b2BtnClick(event: createjs.MouseEvent) {
+            // Switch to the OVER Scene
+            scene = config.Scene.outcomeC2;
+            changeScene();
+        }
+
+
+
     }
 }

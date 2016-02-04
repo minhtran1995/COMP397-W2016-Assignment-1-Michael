@@ -14,6 +14,11 @@
         public static outcomeB2: number = 9;
         public static outcomeB3: number = 10;
         public static outcomeB4: number = 11;
+        public static decisionC: number = 12;
+        public static outcomeC1: number = 13;
+        public static outcomeC2: number = 14;
+        public static outcomeC1Ending: number = 15;
+        public static outcomeC2Ending: number = 16;
     }
     
     

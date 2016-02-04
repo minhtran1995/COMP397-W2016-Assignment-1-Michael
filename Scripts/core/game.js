@@ -18,6 +18,11 @@ var outcomeB1;
 var outcomeB2;
 var outcomeB3;
 var outcomeB4;
+var decisionC;
+var outcomeC1;
+var outcomeC2;
+var outcomeC1Ending;
+var outcomeC2Ending;
 var bmg;
 function init() {
     //Set up BMG
@@ -135,6 +140,31 @@ function changeScene() {
             //There is no Horror anymore
             bmg.pause();
             bmg.currentTime = 0;
+            break;
+        case config.Scene.decisionC:
+            // show the game OVER scene            
+            decisionC = new scenes.decisionC();
+            currentScene = decisionC;
+            break;
+        case config.Scene.outcomeC1:
+            // show the game OVER scene            
+            outcomeC1 = new scenes.outcomeC1();
+            currentScene = outcomeC1;
+            break;
+        case config.Scene.outcomeC2:
+            // show the game OVER scene            
+            outcomeC2 = new scenes.outcomeC2();
+            currentScene = outcomeC2;
+            break;
+        case config.Scene.outcomeC1Ending:
+            // show the game OVER scene            
+            outcomeC1Ending = new scenes.outcomeC1Ending();
+            currentScene = outcomeC1Ending;
+            break;
+        case config.Scene.outcomeC2Ending:
+            // show the game OVER scene            
+            outcomeC2Ending = new scenes.outcomeC2Ending();
+            currentScene = outcomeC2Ending;
             break;
     }
     console.log(currentScene.numChildren);

@@ -51,7 +51,7 @@ var scenes;
             changeScene();
         };
         outcomeB1.prototype._nextButtonClick = function (event) {
-            scene = config.Scene.decisionB;
+            scene = config.Scene.decisionC;
             changeScene();
         };
         return outcomeB1;
