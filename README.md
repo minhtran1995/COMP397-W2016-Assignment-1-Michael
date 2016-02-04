@@ -14,5 +14,5 @@ COMP397 State Machine Template for Web Game Programming
  * Revision History : 1.1                                                      *
  *******************************************************************************
  
- Live game
+ Live game \n
  comp397-assignment1-michael.azurewebsites.net
