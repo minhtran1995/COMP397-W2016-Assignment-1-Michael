@@ -27,7 +27,7 @@ module scenes {
             this._outcomeA2Sound = new Audio('../../Assets/Sound/A2Sound.mp3');
             this._outcomeA2Sound.play();
             // add the label to the scene
-            this._GameLabel = new createjs.Text("Leon ran away for help..."
+            this._GameLabel = new createjs.Text("Leon ran away for help...But when he gets back..."
                 + "\nThe woman ends up getting kidnapped and has never been found again."
                 + "\nTragedy...", "20px Arial", "#e6e6e6");
             

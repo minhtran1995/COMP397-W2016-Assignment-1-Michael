@@ -37,12 +37,17 @@ var outcomeC2;
 var outcomeC1Ending;
 var outcomeC2Ending;
 var bmg;
+var sound;
 function init() {
     //Set up BMG
     bmg = new Audio('../../Assets/Sound/bmg.mp3');
     bmg.loop = true;
     bmg.volume = 0.7;
     bmg.play();
+    sound = new Audio('../../Assets/Sound/trainBell.wma');
+    sound.loop = true;
+    sound.volume = 0.1;
+    sound.play();
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
     // create our main display list container
@@ -90,6 +95,7 @@ function changeScene() {
             currentScene = menu;
             //Play BMG on menu
             bmg.play();
+            sound.play();
             break;
         case config.Scene.TUTORIAL:
             // show the Tutorial scene            
@@ -145,6 +151,8 @@ function changeScene() {
             //There is no Horror anymore
             bmg.pause();
             bmg.currentTime = 0;
+            sound.pause();
+            sound.currentTime = 0;
             break;
         case config.Scene.decisionC:
             // show the third decision scene            
