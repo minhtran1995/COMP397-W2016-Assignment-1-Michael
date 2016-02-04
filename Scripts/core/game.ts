@@ -1,5 +1,20 @@
 ﻿/// <reference path = "_reference.ts" />
 
+
+/*
+ *******************************************************************************
+ * Source file name : Index.html                                               *
+ * Author's name : Duc Minh Tran (300771859)                                   *
+ * Last Modified by : Duc Minh Tran (300771859)                                *
+ * Last Modified date : Feb 2016                                               *
+ * Program description : This web game, by using create js, is kind of         *
+ *                     simulation game to survive on the last train. User can  *
+ *                     choose options per each page, and user will be          *
+ *                     faced different result by their choices.                *
+ * Revision History : 1.1                                                      *
+ *******************************************************************************
+*/
+
 // global variables
 var canvas: HTMLElement;
 var stage: createjs.Stage;
@@ -97,61 +112,49 @@ function changeScene(): void {
             bmg.play();
             break;
         case config.Scene.TUTORIAL:
-            // show the PLAY scene            
+            // show the Tutorial scene            
             tut = new scenes.TUTORIAL();
             currentScene = tut;
-            console.log("Starting PLAY Scene");
+            console.log("Starting Tutorial Scene");
             break;
         case config.Scene.gameScene1:
-            // show the game OVER scene            
+            // show the game first scene            
             gameScene1 = new scenes.gameScene1();
             currentScene = gameScene1;
-            //console.log("Starting OVER Scene");
             break;
         case config.Scene.decisionA:
-            // show the game OVER scene            
+            // show the first Decision scene            
             decisionA = new scenes.decisionA();
             currentScene = decisionA;
-            //console.log("Starting OVER Scene");
             break;
+        // show different outcome from the first decision
         case config.Scene.outcomeA1:
-            // show the game OVER scene            
             outcomeA1 = new scenes.outcomeA1();
             currentScene = outcomeA1;
-
             break;
         case config.Scene.outcomeA2:
-            // show the game OVER scene            
             outcomeA2 = new scenes.outcomeA2();
             currentScene = outcomeA2;
-            var outcomeA2Sound = new Audio('../../Assets/Sound/A2Sound.mp3');
-            outcomeA2Sound.play();
             break;
         case config.Scene.outcomeA3:
-            // show the game OVER scene
-            
             outcomeA3 = new scenes.outcomeA3();
             currentScene = outcomeA3;
             break;
         case config.Scene.decisionB:
-            // show the game OVER scene
-            
+            // show the second Decision scene            
             decisionB = new scenes.decisionB();
             currentScene = decisionB;
             break;
+        // show different outcome from the second decision
         case config.Scene.outcomeB1:
-            // show the game OVER scene
-            
             outcomeB1 = new scenes.outcomeB1();
             currentScene = outcomeB1;
             break;
         case config.Scene.outcomeB2:
-            // show the game OVER scene            
             outcomeB2 = new scenes.outcomeB2();
             currentScene = outcomeB2;
             break;
         case config.Scene.outcomeB3:
-            // show the game OVER scene            
             outcomeB3 = new scenes.outcomeB3();
             currentScene = outcomeB3;
             break;
@@ -164,31 +167,30 @@ function changeScene(): void {
             bmg.currentTime = 0;
             break;
         case config.Scene.decisionC:
-            // show the game OVER scene            
+            // show the third decision scene            
             decisionC = new scenes.decisionC();
             currentScene = decisionC;
             break;
+        // show the different outcomes scene from third decision
         case config.Scene.outcomeC1:
-            // show the game OVER scene            
             outcomeC1 = new scenes.outcomeC1();
             currentScene = outcomeC1;
             break;
         case config.Scene.outcomeC2:
-            // show the game OVER scene            
             outcomeC2 = new scenes.outcomeC2();
             currentScene = outcomeC2;
             break;
+        // show ending scene base on user decision 
         case config.Scene.outcomeC1Ending:
-            // show the game OVER scene            
             outcomeC1Ending = new scenes.outcomeC1Ending();
             currentScene = outcomeC1Ending;
             break;
         case config.Scene.outcomeC2Ending:
-            // show the game OVER scene            
             outcomeC2Ending = new scenes.outcomeC2Ending();
             currentScene = outcomeC2Ending;
             break;
     }
 
+    //get curernt scene code
     console.log(currentScene.numChildren);
 }

@@ -4,6 +4,7 @@ module scenes {
         private _GameLabel: createjs.Text;
         private _backButton: objects.Button;
         private _mainBG: createjs.Bitmap;
+        private _outcomeA2Sound: HTMLAudioElement;
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
@@ -21,6 +22,10 @@ module scenes {
 
             this.addChild(this._mainBG);
 
+
+            //add bmg to the scene
+            this._outcomeA2Sound = new Audio('../../Assets/Sound/A2Sound.mp3');
+            this._outcomeA2Sound.play();
             // add the PLAY label to the scene
             this._GameLabel = new createjs.Text("Leon ran away for help..."
                 + "\nThe woman ends up getting kidnapped and has never been found again."
@@ -43,8 +48,8 @@ module scenes {
 
             // add this scene to the global stage container
             stage.addChild(this);
-            
-            
+
+
         }
 
         // Scene updates here
@@ -56,7 +61,7 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
         
         // BACK Button click event handler
-        private _backButtonClick(event: createjs.MouseEvent) {            
+        private _backButtonClick(event: createjs.MouseEvent) {
             scene = config.Scene.MENU;
             changeScene();
         }

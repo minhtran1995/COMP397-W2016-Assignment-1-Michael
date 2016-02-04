@@ -5,5 +5,16 @@
 /// <reference path="../objects/scene.ts" />
 /// <reference path="../scenes/gameScene1.ts" />
 /// <reference path="../scenes/tutorial.ts" />
-/// <reference path="../scenes/menu.ts" /> 
+/// <reference path="../scenes/menu.ts" />
+/// <reference path="../scenes/tutorial.ts" />
+/// <reference path="../scenes/gameScene1.ts" />
+/// <reference path="../scenes/decisionA.ts" />
+/// <reference path="../scenes/outcomeA1.ts" />
+/// <reference path="../scenes/outcomeA2.ts" />
+/// <reference path="../scenes/outcomeA3.ts" />
+/// <reference path="../scenes/decisionB.ts" />
+/// <reference path="../scenes/outcomeB1.ts" />
+/// <reference path="../scenes/outcomeB2.ts" />
+/// <reference path="../scenes/outcomeB3.ts" />
+/// <reference path="../scenes/outcomeB4.ts" /> 
 //# sourceMappingURL=_reference.js.map
