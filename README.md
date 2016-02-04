@@ -3,7 +3,7 @@
 COMP397 State Machine Template for Web Game Programming 
 
  *******************************************************************************
- * Source file name : readme.md                                               *
+ * Source file name : readme.md                                                *
  * Author's name : Duc Minh Tran (300771859)                                   *
  * Last Modified by : Duc Minh Tran (300771859)                                *
  * Last Modified date : Feb 2016                                               *
@@ -14,5 +14,6 @@ COMP397 State Machine Template for Web Game Programming
  * Revision History : 1.1                                                      *
  *******************************************************************************
  
- Live game \n
+ Live game
+ 
  comp397-assignment1-michael.azurewebsites.net
