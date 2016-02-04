@@ -3,7 +3,7 @@
 
 /*
  *******************************************************************************
- * Source file name : Index.html                                               *
+ * Source file name : game.ts                                                  *
  * Author's name : Duc Minh Tran (300771859)                                   *
  * Last Modified by : Duc Minh Tran (300771859)                                *
  * Last Modified date : Feb 2016                                               *
