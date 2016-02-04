@@ -19,7 +19,7 @@ var scenes;
             this._mainBG.x = 0;
             this._mainBG.y = 100;
             this.addChild(this._mainBG);
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("...Leon decides to call the cab, without realizing the girl got onbroad "
                 + "\n...Tomorrow morning, her body is found near the subway track"
                 + "\nIt seems like he is the last person who saw her alive..."
@@ -34,6 +34,7 @@ var scenes;
             this._backButton.on("click", this._backButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
+            // BMG 
             this._outcomeB3Sound = new Audio('../../Assets/Sound/B3Sound.mp3');
             this._outcomeB3Sound.loop = true;
             this._outcomeB3Sound.volume = 0.7;

@@ -26,7 +26,7 @@ module scenes {
 
             this.addChild(this._mainBG);
 
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("The last train finally arrived"
                 + "\nThere is nobody onboard... "
                 + "\nBUT an unknown man"
@@ -88,9 +88,6 @@ module scenes {
             // decision Button event listener
             this._b4Btn.on("click", this._b4BtnClick, this);
 
-
-
-
             // add this scene to the global stage container
             stage.addChild(this);
 
@@ -107,31 +104,29 @@ module scenes {
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
-            // Switch to the OVER Scene
+
             scene = config.Scene.outcomeA3;
             changeScene();
         }
 
+        //Switcht to the corresponding scene
         private _b1BtnClick(event: createjs.MouseEvent) {
-            // Switch to the OVER Scene
+
             scene = config.Scene.outcomeB1;
             changeScene();
         }
 
         private _b2BtnClick(event: createjs.MouseEvent) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeB2;
             changeScene();
         }
-        
+
         private _b3BtnClick(event: createjs.MouseEvent) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeB3;
             changeScene();
         }
-        
+
         private _b4BtnClick(event: createjs.MouseEvent) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeB4;
             changeScene();
         }

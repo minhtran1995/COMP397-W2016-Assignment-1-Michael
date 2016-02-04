@@ -21,25 +21,24 @@ module scenes {
             this.addChild(this._mainBG);
 
 
-            // add the PLAY label to the scene
+            // add the  label to the scene
             this._playLabel = new createjs.Text("This is a simulated game based on the movie The Midnight Meat Train - By Ryûhei Kitamura."
                 + "\nYou are responsible for every single move in this game, as it will lead you to different outcomes."
                 + "\n\n\nWARNING: Player discretion advised"
                 , "20px Arial", "#e6e6e6");
-            //this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
-            //this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
+            
             this._playLabel.x = 100;
             this._playLabel.y = 100;
             this.addChild(this._playLabel);
 
-            // add the NEXT button to the PLAY scene
+            // add the play button to the PLAY scene
             this._nextButton = new objects.Button(
                 "PlayButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._nextButton);
            
-            // NEXT Button event listener
+            // play Button event listener
             this._nextButton.on("click", this._nextButtonClick, this);
 
             // add the BACK button to the PLAY scene
@@ -65,7 +64,7 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        // NEXT Button click event handler
+        // play Button click event handler
         private _nextButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
             scene = config.Scene.gameScene1;

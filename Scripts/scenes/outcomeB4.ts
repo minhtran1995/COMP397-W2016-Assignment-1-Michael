@@ -3,7 +3,7 @@ module scenes {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _GameLabel: createjs.Text;
         private _backButton: objects.Button;
-       
+
         private _mainBG: createjs.Bitmap;
         private _outcomeB4Sound: HTMLAudioElement;
         // CONSTRUCTOR ++++++++++++++++++++++
@@ -23,12 +23,12 @@ module scenes {
 
             this.addChild(this._mainBG);
 
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("Leon convinces the girl to take the cab with him...."
-                + "\n...He doesn't feel safe when let the girl be alone on the way home"                
+                + "\n...He doesn't feel safe when let the girl be alone on the way home"
                 + "\nHe calls the cab..."
                 + "\nBoth of Them are alive - Good Ending ~~~", "20px Arial", "#e6e6e6");
-            
+
             this._GameLabel.x = 100;
             this._GameLabel.y = 0;
             this.addChild(this._GameLabel);
@@ -46,9 +46,11 @@ module scenes {
 
             // add this scene to the global stage container
             stage.addChild(this);
+            
+            //BMG
             this._outcomeB4Sound = new Audio('../../Assets/Sound/B4Sound.mp3');
             this._outcomeB4Sound.loop = true;
-            this._outcomeB4Sound.volume= 0.7;
+            this._outcomeB4Sound.volume = 0.7;
             this._outcomeB4Sound.play();
 
         }

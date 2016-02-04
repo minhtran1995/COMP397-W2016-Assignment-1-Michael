@@ -23,7 +23,7 @@ module scenes {
 
             this.addChild(this._mainBG);
 
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("The psychopath swings his hammer and shoutes...."
                 + "\nLeon dodges that attack, he grabs the hammer from the psychopath..."
                 + "\nHe uses all his streng to swing the hammer to the psychopath's face..."

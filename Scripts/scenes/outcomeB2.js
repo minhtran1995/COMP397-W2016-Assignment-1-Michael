@@ -19,13 +19,11 @@ var scenes;
             this._mainBG.x = 0;
             this._mainBG.y = 100;
             this.addChild(this._mainBG);
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("...Leon hears an annoying sound... It sound like bone-cracking"
                 + "\n...He walks to the car window... The unknown man is hitting the poor girl with his hammer"
                 + "\nThere is no way Leon can get to her...he witnesses that horrible moment"
                 + "\nHe will never forget those images till the end of his life !", "20px Arial", "#e6e6e6");
-            //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
-            //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
             this._GameLabel.x = 100;
             this._GameLabel.y = 0;
             this.addChild(this._GameLabel);
@@ -50,10 +48,6 @@ var scenes;
             this._outcomeB2Sound.currentTime = 0;
             ;
             scene = config.Scene.MENU;
-            changeScene();
-        };
-        outcomeB2.prototype._nextButtonClick = function (event) {
-            scene = config.Scene.decisionB;
             changeScene();
         };
         return outcomeB2;

@@ -19,7 +19,7 @@ var scenes;
             this._mainBG.x = 100;
             this._mainBG.y = 100;
             this.addChild(this._mainBG);
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("Where else could they hide on the train..."
                 + "\nThe psychopath murders both Leon and the girl...."
                 + "\n...He hangs the bodies upside down - presenting his achievement...", "20px Arial", "#e6e6e6");

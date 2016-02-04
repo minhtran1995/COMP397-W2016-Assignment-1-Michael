@@ -25,7 +25,7 @@ module scenes {
 
             this.addChild(this._mainBG);
 
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("Leon stands still..., he couldn't believe in his eyes"
                 + "\nA quick thought comes to his mind...", "20px Arial", "#e6e6e6");
 
@@ -58,7 +58,7 @@ module scenes {
             // add the decision button to the  scene
             this._b2Btn = new objects.Button(
                 "C2",
-                710+162+20,
+                710 + 162 + 20,
                 560);
             this.addChild(this._b2Btn);
            
@@ -86,24 +86,18 @@ module scenes {
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeB1;
             changeScene();
         }
-
+        //switch to correspoding outcome
         private _b1BtnClick(event: createjs.MouseEvent) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeC1;
             changeScene();
         }
 
         private _b2BtnClick(event: createjs.MouseEvent) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeC2;
             changeScene();
         }
-
-
-
     }
 }

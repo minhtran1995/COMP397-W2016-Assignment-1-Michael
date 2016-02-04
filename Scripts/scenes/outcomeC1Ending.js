@@ -19,7 +19,7 @@ var scenes;
             this._mainBG.x = 300;
             this._mainBG.y = 100;
             this.addChild(this._mainBG);
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("Leon later.."
                 + "\nGot arrested by the police !"
                 + "\nHe was sentences with First-degree murder"
@@ -34,6 +34,7 @@ var scenes;
             this._nextButton.on("click", this._nextButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
+            //BMG
             this._outcomeC1EndingSound = new Audio('../../Assets/Sound/B3Sound.mp3');
             this._outcomeC1EndingSound.loop = true;
             this._outcomeC1EndingSound.volume = 0.7;
@@ -45,6 +46,7 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         // BACK Button click event handler
         outcomeC1Ending.prototype._nextButtonClick = function (event) {
+            // stop bmg before go back to menu
             this._outcomeC1EndingSound.pause();
             this._outcomeC1EndingSound.currentTime = 0;
             ;

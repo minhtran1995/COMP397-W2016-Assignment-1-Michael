@@ -19,13 +19,11 @@ var scenes;
             this._mainBG.x = 0;
             this._mainBG.y = 100;
             this.addChild(this._mainBG);
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("Leon points at the security camera and warns the men"
                 + "\nAll their acts are being recored. The camera footages will be the evidence."
                 + "\nThey get pissed off and walk away."
                 + "\nThe girl and you are safe now...", "20px Arial", "#e6e6e6");
-            //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
-            //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
             this._GameLabel.x = 100;
             this._GameLabel.y = 0;
             this.addChild(this._GameLabel);
@@ -51,6 +49,7 @@ var scenes;
             scene = config.Scene.decisionA;
             changeScene();
         };
+        // Next Button click event handler
         outcomeA3.prototype._nextButtonClick = function (event) {
             scene = config.Scene.decisionB;
             changeScene();

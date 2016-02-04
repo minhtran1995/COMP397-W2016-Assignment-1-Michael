@@ -19,7 +19,7 @@ var scenes;
             this._mainBG.x = 0;
             this._mainBG.y = 100;
             this.addChild(this._mainBG);
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("The last train finally arrived"
                 + "\nThere is nobody onboard... "
                 + "\nBUT an unknown man"
@@ -61,27 +61,23 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         // BACK Button click event handler
         decisionB.prototype._backButtonClick = function (event) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeA3;
             changeScene();
         };
+        //Switcht to the corresponding scene
         decisionB.prototype._b1BtnClick = function (event) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeB1;
             changeScene();
         };
         decisionB.prototype._b2BtnClick = function (event) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeB2;
             changeScene();
         };
         decisionB.prototype._b3BtnClick = function (event) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeB3;
             changeScene();
         };
         decisionB.prototype._b4BtnClick = function (event) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeB4;
             changeScene();
         };

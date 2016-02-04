@@ -19,7 +19,7 @@ var scenes;
             this._mainBG.x = 0;
             this._mainBG.y = 100;
             this.addChild(this._mainBG);
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("Leon stands still..., he couldn't believe in his eyes"
                 + "\nA quick thought comes to his mind...", "20px Arial", "#e6e6e6");
             this._GameLabel.x = 500;
@@ -49,17 +49,15 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         // BACK Button click event handler
         decisionC.prototype._backButtonClick = function (event) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeB1;
             changeScene();
         };
+        //switch to correspoding outcome
         decisionC.prototype._b1BtnClick = function (event) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeC1;
             changeScene();
         };
         decisionC.prototype._b2BtnClick = function (event) {
-            // Switch to the OVER Scene
             scene = config.Scene.outcomeC2;
             changeScene();
         };

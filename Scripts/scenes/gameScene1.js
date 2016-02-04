@@ -20,11 +20,9 @@ var scenes;
             this._mainBG.x = config.Screen.WIDTH - 850;
             this._mainBG.y = config.Screen.HEIGHT - 564;
             this.addChild(this._mainBG);
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("A photographer, Leon is obsessed with dark subject matter"
                 + "\nHe's loitering at night time, trying to capture images of the dark Urban Life", "20px Arial", "#e6e6e6");
-            //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
-            //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
             this._GameLabel.x = 100;
             this._GameLabel.y = 100;
             this.addChild(this._GameLabel);
@@ -47,12 +45,11 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         // BACK Button click event handler
         gameScene1.prototype._backButtonClick = function (event) {
-            // Switch to the OVER Scene
             scene = config.Scene.TUTORIAL;
             changeScene();
         };
+        // Switch to the next Scene
         gameScene1.prototype._nextButtonClick = function (event) {
-            // Switch to the OVER Scene
             scene = config.Scene.decisionA;
             changeScene();
         };

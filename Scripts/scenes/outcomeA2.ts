@@ -26,12 +26,11 @@ module scenes {
             //add bmg to the scene
             this._outcomeA2Sound = new Audio('../../Assets/Sound/A2Sound.mp3');
             this._outcomeA2Sound.play();
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("Leon ran away for help..."
                 + "\nThe woman ends up getting kidnapped and has never been found again."
                 + "\nTragedy...", "20px Arial", "#e6e6e6");
-            //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
-            //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
+            
             this._GameLabel.x = 100;
             this._GameLabel.y = 0;
             this.addChild(this._GameLabel);

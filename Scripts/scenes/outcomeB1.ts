@@ -22,12 +22,11 @@ module scenes {
 
             this.addChild(this._mainBG);
 
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("The unknown man slowly pull out his bloody hammer...."
                 + "\n...He walks toward both of you..."
                 + "\nThe girl starts screaming...", "20px Arial", "#e6e6e6");
-            //this._GameLabel.regX = this._GameLabel.getMeasuredWidth() * 0.5;
-            //this._GameLabel.regY = this._GameLabel.getMeasuredHeight() * 0.5;
+
             this._GameLabel.x = 100;
             this._GameLabel.y = 0;
             this.addChild(this._GameLabel);
@@ -71,7 +70,7 @@ module scenes {
             scene = config.Scene.decisionB;
             changeScene();
         }
-
+        //Next Button Click even handler
         private _nextButtonClick(event: createjs.MouseEvent) {
             scene = config.Scene.decisionC;
             changeScene();

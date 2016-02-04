@@ -19,7 +19,7 @@ var scenes;
             this._mainBG.x = 0;
             this._mainBG.y = 100;
             this.addChild(this._mainBG);
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("The psychopath chase Leon and the girl...."
                 + "\nThe train doesn't stop...the operator does not seem to hear any sounds from outside"
                 + "\n..........", "20px Arial", "#e6e6e6");
@@ -33,6 +33,7 @@ var scenes;
             this._nextButton.on("click", this._nextButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
+            //BMG
             this._outcomeC2Sound = new Audio('../../Assets/Sound/C1Sound.mp3');
             this._outcomeC2Sound.volume = 0.7;
             this._outcomeC2Sound.play();

@@ -23,7 +23,7 @@ module scenes {
 
             this.addChild(this._mainBG);
 
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("Leon later.."
                 + "\nGot arrested by the police !"
                 + "\nHe was sentences with First-degree murder"
@@ -46,6 +46,8 @@ module scenes {
 
             // add this scene to the global stage container
             stage.addChild(this);
+            
+            //BMG
             this._outcomeC1EndingSound = new Audio('../../Assets/Sound/B3Sound.mp3');
             this._outcomeC1EndingSound.loop = true;
             this._outcomeC1EndingSound.volume = 0.7;
@@ -63,6 +65,7 @@ module scenes {
         
         // BACK Button click event handler
         private _nextButtonClick(event: createjs.MouseEvent) {
+            // stop bmg before go back to menu
             this._outcomeC1EndingSound.pause();
             this._outcomeC1EndingSound.currentTime = 0;;
             scene = config.Scene.MENU;

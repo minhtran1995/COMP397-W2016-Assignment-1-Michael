@@ -25,7 +25,7 @@ module scenes {
 
             this.addChild(this._mainBG);
 
-            // add the PLAY label to the scene
+            // add the label to the scene
             this._GameLabel = new createjs.Text("Leon saw a group of man and decided to follow them to the subway"
                 + "\nLater, he finds out a woman is being harrashed by the group"
                 + "\nHe doesn't know what to do...", "20px Arial", "#e6e6e6");
@@ -53,27 +53,27 @@ module scenes {
                 560)
             this.addChild(this._a3Btn);
            
-            // BACK Button event listener
+            // decision Button event listener
             this._a3Btn.on("click", this._a3ButtonClick, this);
             
-              // add the decision button to the scene
+            // add the decision button to the scene
             this._a2Btn = new objects.Button(
                 "A2",
-                config.Screen.WIDTH - this._a3Btn.getWidth()-300,
+                config.Screen.WIDTH - this._a3Btn.getWidth() - 300,
                 560)
             this.addChild(this._a2Btn);
            
-            // BACK Button event listener
+            // decision Button event listener
             this._a2Btn.on("click", this._a2ButtonClick, this);
             
-              // add the decision button to the scene
+            // add the decision button to the scene
             this._a1Btn = new objects.Button(
                 "A1",
-               config.Screen.WIDTH - this._a3Btn.getWidth()- this._a2Btn.getWidth()-380,
+                config.Screen.WIDTH - this._a3Btn.getWidth() - this._a2Btn.getWidth() - 380,
                 560)
             this.addChild(this._a1Btn);
            
-            // BACK Button event listener
+            // decision Button event listener
             this._a1Btn.on("click", this._a1ButtonClick, this);
 
             // add this scene to the global stage container
@@ -90,25 +90,25 @@ module scenes {
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
-            // Switch to the OVER Scene
+            // Switch to the previous Scene
             scene = config.Scene.gameScene1;
             changeScene();
         }
-
+        //swich to corresponding scene
         private _a3ButtonClick(event: createjs.MouseEvent) {
-            // Switch to the a  Scene
+
             scene = config.Scene.outcomeA3;
             changeScene();
         }
-        
+
         private _a1ButtonClick(event: createjs.MouseEvent) {
-            // Switch to the a  Scene
+
             scene = config.Scene.outcomeA1;
             changeScene();
         }
-        
+
         private _a2ButtonClick(event: createjs.MouseEvent) {
-            // Switch to the a  Scene
+
             scene = config.Scene.outcomeA2;
             changeScene();
         }
