@@ -40,6 +40,11 @@ var scenes;
             this.addChild(this._b2Btn);
             // decision Button event listener
             this._b2Btn.on("click", this._b2BtnClick, this);
+            // add the decision button to the  scene
+            this._b3Btn = new objects.Button("C3", 710 - 162 - 30, 560);
+            this.addChild(this._b3Btn);
+            // decision Button event listener
+            this._b3Btn.on("click", this._b3BtnClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -59,6 +64,10 @@ var scenes;
         };
         decisionC.prototype._b2BtnClick = function (event) {
             scene = config.Scene.outcomeC2;
+            changeScene();
+        };
+        decisionC.prototype._b3BtnClick = function (event) {
+            scene = config.Scene.outcomeC3;
             changeScene();
         };
         return decisionC;

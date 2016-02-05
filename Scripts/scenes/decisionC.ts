@@ -5,8 +5,10 @@ module scenes {
         private _backButton: objects.Button;
         private _nextButton: objects.Button;
 
+        private _b3Btn: objects.Button;
         private _b2Btn: objects.Button;
         private _b1Btn: objects.Button;
+
         private _mainBG: createjs.Bitmap;
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -66,7 +68,15 @@ module scenes {
             this._b2Btn.on("click", this._b2BtnClick, this);
             
            
-
+            // add the decision button to the  scene
+            this._b3Btn = new objects.Button(
+                "C3",
+                710 -162 - 30,
+                560);
+            this.addChild(this._b3Btn);
+           
+            // decision Button event listener
+            this._b3Btn.on("click", this._b3BtnClick, this);
 
 
 
@@ -97,6 +107,11 @@ module scenes {
 
         private _b2BtnClick(event: createjs.MouseEvent) {
             scene = config.Scene.outcomeC2;
+            changeScene();
+        }
+
+        private _b3BtnClick(event: createjs.MouseEvent) {
+            scene = config.Scene.outcomeC3;
             changeScene();
         }
     }

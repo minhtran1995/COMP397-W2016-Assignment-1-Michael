@@ -34,6 +34,7 @@ var outcomeB4;
 var decisionC;
 var outcomeC1;
 var outcomeC2;
+var outcomeC3;
 var outcomeC1Ending;
 var outcomeC2Ending;
 var bmg;
@@ -176,6 +177,10 @@ function changeScene() {
         case config.Scene.outcomeC2Ending:
             outcomeC2Ending = new scenes.outcomeC2Ending();
             currentScene = outcomeC2Ending;
+            break;
+        case config.Scene.outcomeC3:
+            outcomeC3 = new scenes.outcomeC3();
+            currentScene = outcomeC3;
             break;
     }
     //get curernt scene code

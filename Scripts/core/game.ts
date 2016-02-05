@@ -39,6 +39,7 @@ var outcomeB4: scenes.outcomeB4;
 var decisionC: scenes.decisionC;
 var outcomeC1: scenes.outcomeC1;
 var outcomeC2: scenes.outcomeC2;
+var outcomeC3: scenes.outcomeC3;
 var outcomeC1Ending: scenes.outcomeC1Ending;
 var outcomeC2Ending: scenes.outcomeC2Ending;
 var bmg: HTMLAudioElement;
@@ -197,6 +198,10 @@ function changeScene(): void {
         case config.Scene.outcomeC2Ending:
             outcomeC2Ending = new scenes.outcomeC2Ending();
             currentScene = outcomeC2Ending;
+            break;
+            case config.Scene.outcomeC3:
+            outcomeC3 = new scenes.outcomeC3();
+            currentScene = outcomeC3;
             break;
     }
 
