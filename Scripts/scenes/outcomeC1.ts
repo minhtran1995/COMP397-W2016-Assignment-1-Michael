@@ -26,7 +26,7 @@ module scenes {
             // add the label to the scene
             this._GameLabel = new createjs.Text("The psychopath swings his hammer and shoutes...."
                 + "\nLeon dodges that attack, he grabs the hammer from the psychopath..."
-                + "\nHe uses all his streng to swing the hammer to the psychopath's face..."
+                + "\nHe uses all his strength to swing the hammer to the psychopath's face..."
                 + "\nThe psychopath die instantly !", "20px Arial", "#e6e6e6");
 
             this._GameLabel.x = 100;
