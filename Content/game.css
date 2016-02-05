@@ -9,6 +9,8 @@ canvas {
     text-align: center;
     margin-left: 0;
     background-color:black;
+    width:"1024" ;
+    height:"600";
 }
 
 .game{
